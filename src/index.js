@@ -1,5 +1,5 @@
 module.exports = function toReadable (number) {
-    let dozens;
+    let dos;
     let words = {
         0: 'zero',
         1: 'one',
@@ -23,7 +23,7 @@ module.exports = function toReadable (number) {
         18: 'eighteen',
     };
     if (20 <= number) {
-        dozens = {
+        dos = {
             20: 'twenty',
             30: 'thirty',
             40: 'forty',
@@ -36,7 +36,7 @@ module.exports = function toReadable (number) {
         const num = String(number).split('');
         if (num.length === 2)
             if (number % 10 == 0) {
-                return dozens[number];
+                return dos[number];
             } else {
                 if (num[0] == 2) {
                     return 'twenty' + ' ' + words[num[1]];
@@ -69,28 +69,28 @@ module.exports = function toReadable (number) {
                     if (num[1] != 2) {
                         if (num[1] != 3) {
                             if (num[1] == 4) {
-                                return words[parseInt(num[0])] + ' hundred ' + dozens[40];
+                                return words[parseInt(num[0])] + ' hundred ' + dos[40];
                             }
                             if (num[1] == 5) {
-                                return words[parseInt(num[0])] + ' hundred ' + dozens[50];
+                                return words[parseInt(num[0])] + ' hundred ' + dos[50];
                             }
                             if (num[1] == 6) {
-                                return words[parseInt(num[0])] + ' hundred ' + dozens[60];
+                                return words[parseInt(num[0])] + ' hundred ' + dos[60];
                             }
                             if (num[1] == 7) {
-                                return words[parseInt(num[0])] + ' hundred ' + dozens[70];
+                                return words[parseInt(num[0])] + ' hundred ' + dos[70];
                             }
                             if (num[1] == 8) {
-                                return words[parseInt(num[0])] + ' hundred ' + dozens[80];
+                                return words[parseInt(num[0])] + ' hundred ' + dos[80];
                             }
                             if (num[1] == 9) {
-                                return words[parseInt(num[0])] + ' hundred ' + dozens[90];
+                                return words[parseInt(num[0])] + ' hundred ' + dos[90];
                             }
                         } else {
-                            return words[parseInt(num[0])] + ' hundred ' + dozens[30];
+                            return words[parseInt(num[0])] + ' hundred ' + dos[30];
                         }
                     } else {
-                        return words[parseInt(num[0])] + ' hundred ' + dozens[20];
+                        return words[parseInt(num[0])] + ' hundred ' + dos[20];
                     }
                 if (num[1] == 0) {
                     return words[parseInt(num[0])] + ' hundred ' + words[num[2]];
@@ -128,28 +128,28 @@ module.exports = function toReadable (number) {
                     }
                 }
                 if (num[1] == 2) {
-                    return words[parseInt(num[0])] + ' hundred ' + dozens[20] + ' ' + words[num[2]];
+                    return words[parseInt(num[0])] + ' hundred ' + dos[20] + ' ' + words[num[2]];
                 }
                 if (num[1] == 3) {
-                    return words[parseInt(num[0])] + ' hundred ' + dozens[30] + ' ' + words[num[2]];
+                    return words[parseInt(num[0])] + ' hundred ' + dos[30] + ' ' + words[num[2]];
                 }
                 if (num[1] == 4) {
-                    return words[parseInt(num[0])] + ' hundred ' + dozens[40] + ' ' + words[num[2]];
+                    return words[parseInt(num[0])] + ' hundred ' + dos[40] + ' ' + words[num[2]];
                 }
                 if (num[1] == 5) {
-                    return words[parseInt(num[0])] + ' hundred ' + dozens[50] + ' ' + words[num[2]];
+                    return words[parseInt(num[0])] + ' hundred ' + dos[50] + ' ' + words[num[2]];
                 }
                 if (num[1] == 6) {
-                    return words[parseInt(num[0])] + ' hundred ' + dozens[60] + ' ' + words[num[2]];
+                    return words[parseInt(num[0])] + ' hundred ' + dos[60] + ' ' + words[num[2]];
                 }
                 if (num[1] == 7) {
-                    return words[parseInt(num[0])] + ' hundred ' + dozens[70] + ' ' + words[num[2]];
+                    return words[parseInt(num[0])] + ' hundred ' + dos[70] + ' ' + words[num[2]];
                 }
                 if (num[1] == 8) {
-                    return words[parseInt(num[0])] + ' hundred ' + dozens[80] + ' ' + words[num[2]];
+                    return words[parseInt(num[0])] + ' hundred ' + dos[80] + ' ' + words[num[2]];
                 }
                 if (num[1] == 9) {
-                    return words[parseInt(num[0])] + ' hundred ' + dozens[90] + ' ' + words[num[2]];
+                    return words[parseInt(num[0])] + ' hundred ' + dos[90] + ' ' + words[num[2]];
                 }
             } else {
                 return words[parseInt(num[0])] + ' hundred';
